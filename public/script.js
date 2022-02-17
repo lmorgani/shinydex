@@ -1,6 +1,6 @@
 const container = document.querySelector('#mons');
 
-axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=100')
+axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000')
   .then(function (response) {
 
     // an array of character objects will be stored in this variable. 
@@ -12,7 +12,7 @@ console.log(mons);
     // see also: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
     
     console.log(typeof mons.results);
-    const pokemonNames = mons.results.map( pokemon => pokemon.results)
+    const pokemonNames = mons.results.map( pokemon => pokemon.name)
     // const pokemonNames = mons.map( pokemon => pokemon.results)
 // const pokemonNames = mons.results.keys(0);
 console.log(pokemonNames);
@@ -31,9 +31,11 @@ console.log(pokemonNames);
         // using the array filter to locate the character 
         // whose name matches the autocomplete. 
         // see also: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-        const [selected] = pokemon.filter( 
-            pokemon => pokemon.results.name == event.detail.selection.value 
+       
+        const [selected] = pokemonNames.filter( 
+            pokemon => pokemon.name == event.detail.selection.value 
           ) ;
+          console.log(event.detail.selection.value);
         renderPokemon(selected); 
       }); 
   })
@@ -44,6 +46,12 @@ console.log(pokemonNames);
 
 
   const renderPokemon  = (pokemon) => {
+    console.log(pokemon)
+
+    axios.get('pokemon.url')
+    .then(function (response) {
+console.log(pokemon.url)
+    })
 
     // reset the contents of the container to remove previous result.
     container.innerHTML = '';
@@ -54,7 +62,7 @@ console.log(pokemonNames);
     characterDetails.classList.add('characterDetails'); 
     characterDetails.innerHTML = 
       `<img src="${pokemon.sprites.front_shiny}">
-      <p>${pokemon.results.name}</p>`;
+      <p>${pokemon.name}</p>`;
 
     // add everything to the page.
     container.appendChild(characterDetails); 
