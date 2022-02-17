@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShinyDex</title>
+    
+    <!--- Gelica via Monotype.com -->
+    <link href="https://cdn.fonts.net/kit/148608b0-8b47-11ec-9ce3-0220834439f4/148608b0-8b47-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
+
+    <!-- Poppins via GOogle Fonts. --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link href="https://cdn.fonts.net/kit/31bd9480-8b82-11ec-9ce3-0220834439f4/31bd9480-8b82-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
+
+    <!-- CSS for the autocomplete JS library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">
+
+
+    <!-- axios for making Http requests  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>ShinyDex</h1>
+
+      <!--  this input element is targeted by the autocompleteJS library --->
+      <input id="autoComplete">
+      
+    </header>
+
+      <main id="mons">
+        <!-- javascript will populate this  -->
+      </main>
+
+      <!-- The autocomplete JS library helps to build search UI -->
+      <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+ 
+      <!-- javascript to fetch and display data everything. -->
+	    <script src="script.js"></script>
+  </body>
+</html>

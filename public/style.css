@@ -1,0 +1,41 @@
+ h1{
+    font-family: 'AvallonRegular';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
+    font-size: 6rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+input{
+    margin: auto auto;
+}
+
+body{ 
+    margin: 0; 
+    font-family: 'AntonaMedium';
+}
+* { box-sizing: border-box; }
+
+/* The overall Page layout is a flex row (nav and content side-by-side) 
+We will override this for smaller screens later on*/
+main { 
+    display: flex; 
+    flex-direction: row;
+}
+
+/* On a big screen we split the layout 30%/70%
+Note the units are "vw" (viewport width) */
+main nav { width: 30vw; }
+main article{ width: 70vw; }
+
+
+/* On a small screen the navigation moves to the top. */
+@media (max-width: 900px) { 
+    main { flex-direction: column; } 
+    main nav, main article { width: 100vw; }
+}
+
+.characterDetails{ 
+    padding: 2rem;
+}
