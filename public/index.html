@@ -16,31 +16,50 @@
     <link href="https://cdn.fonts.net/kit/31bd9480-8b82-11ec-9ce3-0220834439f4/31bd9480-8b82-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
 
     <!-- CSS for the autocomplete JS library-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.02.min.css">
 
 
     <!-- axios for making Http requests  -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
+
   </head>
+
   <body>
+
     <header>
-      <h1>ShinyDex</h1>
+
+      <h1><a href="/public/index.html" target="_blank" style="text-decoration: none;" class="logo">ShinyDex</a></h1>
 
       <!--  this input element is targeted by the autocompleteJS library --->
-      <input id="autoComplete">
-      
+      <input class="autoComplete search" id="autoComplete">
+
     </header>
 
       <main id="mons">
         <!-- javascript will populate this  -->
       </main>
 
+      <!-- Footer template used from the What Do You Mean code found at https://github.com/nsitu/WhatDoYouMean -->
+<footer>
+  <p>
+    <a href="https://pokeapi.co/"><img src="pokeapi.png"></a></p>
+    
+    <p>ShinyDex is a project created by <a href="https://lucasmorgani.myportfolio.com">Lucas Morgani</a> to fetch and display data from the <a href="https://pokeapi.co/">RESTful Pokémon API</a>. </p> 
+      
+      <p>Made for Integrated Systems Design 2 in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College</a>. 
+    Data fetched with <a href="https://axios-http.com/">Axios HTTP Client</a>.  Fonts via <a href="https://enterprise.monotype.com/">Monotype</a>.
+    </p>
+</footer>
+
+<!-- Autocomplete JS library comes from the Bob's Burgers Search (https://github.com/nsitu/BobsBurgersSearch) and was adapted with the Pokemon API. -->
+
       <!-- The autocomplete JS library helps to build search UI -->
       <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
  
       <!-- javascript to fetch and display data everything. -->
 	    <script src="script.js"></script>
+
   </body>
 </html>

@@ -1,41 +1,183 @@
- h1{
-    font-family: 'AvallonRegular';
-    font-style: 'Normal';
-    font-stretch: 'Normal';
-    font-size: 6rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-input{
-    margin: auto auto;
-}
-
 body{ 
+    background: rgb(255, 255, 255);
     margin: 0; 
-    font-family: 'AntonaMedium';
 }
 * { box-sizing: border-box; }
 
-/* The overall Page layout is a flex row (nav and content side-by-side) 
+ /* The overall Page layout is a flex row (nav and content side-by-side) 
 We will override this for smaller screens later on*/
 main { 
-    display: flex; 
-    flex-direction: row;
+     display: flex; 
+    flex-direction: row; 
 }
 
-/* On a big screen we split the layout 30%/70%
-Note the units are "vw" (viewport width) */
-main nav { width: 30vw; }
-main article{ width: 70vw; }
+header{
+    padding: .6rem;
+    padding-bottom: 2rem;
+    /* background: rgba(190, 182, 155, 0.867); */
+    background: rgba(178, 235, 206, 0.322);
+    /* background: rgb(137, 241, 189); */
+    box-shadow: 3px 3px 15px 0px #e9e9e9;
+    text-align: center;
+
+}
+
+h1{
+    font-family: 'AvallonRegular';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
+    font-size: 5rem;
+    font-weight: 500;
+    text-align: center;
+    /* color: rgba(44, 42, 36, 0.938); */
+    color: rgb(31, 48, 39);
+    margin: 10px 0px;
+    margin-top: 15px;
+}
+
+.logo{
+    transition: opacity 0.2s ease-out;  
+
+}
+
+.logo:link,
+.logo:visited{
+    color: rgb(31, 48, 39);
+
+}
+
+.logo:hover {
+opacity: 0.8; 
+}
+
+
+
 
 
 /* On a small screen the navigation moves to the top. */
 @media (max-width: 900px) { 
     main { flex-direction: column; } 
     main nav, main article { width: 100vw; }
+
+    /* .pokepic {
+        width: 100%;
+    }
+    .name {
+    }
+
+    .type {
+    }
+    
+    .ability {
+    }
+    
+    .location {
+    } */
+}
+
+.autoComplete{
+    font-family: 'FFKaytekSansBold';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
+}
+
+li::first-letter{
+    text-transform: capitalize;
+}
+
+#autoComplete_list_1 {
+    font-family: 'FFKaytekSansBold';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
 }
 
 .characterDetails{ 
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    margin: auto auto;
+    text-align: center;
+}
+
+.pokepic{
+    width: 100%;
+    max-width: 400px;
+}
+
+p{
+    font-family: 'FFKaytekSansBold';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
+}
+p::first-letter {
+text-transform:capitalize;
+}
+
+.name {
+    font-family: 'FFKaytekSansBold';
+    font-style: 'Normal';
+    font-stretch: 'Normal';
+    font-size: 2em;
+}
+
+ .type {
+     margin: 0;
+}
+
+.location {
+    margin: 0;
+} 
+
+/* .ability::first-letter {
+    text-transform:capitalize;
+    }
+
+    .location::first-letter {
+        text-transform:capitalize;
+        } */
+
+footer{
+            /* background: #333; */
+            padding: 2rem 2rem 1rem 2rem;
+            text-align: center;
+           }
+footer p{
+    font-family: 'FFKaytekSansBold';
+    font-size: 0.8rem;
+             max-width: 1000px;
+             color: rgb(54, 54, 54);
+             margin: 0.4em auto;
+           }
+footer img{
+             width: 165px;
+             opacity: 0.5;
+             filter: grayscale(80%);
+           }
+
+           a:link,
+a:visited {
+    /* text-decoration: none; */
+    color: rgb(100, 192, 177);
+}
+
+.widget{
+background-color: rgba(178, 235, 206, 0.322);
+padding: 0 0.25rem;
+border-radius: 20px;
+margin: 10px;
+padding-top:5px;
+padding-bottom: 10px;
+
+}
+
+/* A flex container for "widgets"*/
+#mons .widget .types{
+    margin: 1rem 5rem;
+    display: flex; 
+    flex-flow: wrap;
+    text-align: center; 
+    gap: 1rem;  /* The space between flex items. */
+}
+
+label {
+    font-family: 'FFKaytekSansBlack';
+    font-size: 1rem;
 }
